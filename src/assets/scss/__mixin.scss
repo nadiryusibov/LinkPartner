@@ -49,11 +49,12 @@
 
 @mixin flex-jc($type: center) {
   @include flex();
+  flex-direction: column;
   justify-content: $type;
 }
 
-@mixin flex-center {
-  @include flex-js-center();
+@mixin flex-center($type:space-between) {
+  justify-content: $type;
   @include flex-ai-center();
 }
 
