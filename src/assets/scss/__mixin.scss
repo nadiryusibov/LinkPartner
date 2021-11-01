@@ -10,11 +10,6 @@
   width: $value;
   height: $value;
 }
-@mixin square2($value) {
-  width: $value;
-  height: $value;
-  line-height: $value;
-}
 @mixin fit($value: cover) {
   object-fit: $value;
   -moz-object-fit: $value;
@@ -27,17 +22,9 @@
 }
 %transition {
   transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
 }
-%border-radius{
+%border-radius {
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 @mixin flex() {
   display: flex;
@@ -53,12 +40,22 @@
   justify-content: $type;
 }
 
-@mixin flex-center($type:space-between) {
+@mixin flex-center($type: space-between) {
   justify-content: $type;
   @include flex-ai-center();
 }
 
-@mixin trans_radius{
+@mixin trans_radius {
   border-radius: 50%;
   transform: scale(0);
+}
+
+@mixin fontSize($fontSize, $lineHeight: $fontSize) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+@mixin square2($width, $height: $width, $lineHeight: $width) {
+  width: $width;
+  height: $height;
+  line-height: $lineHeight;
 }
