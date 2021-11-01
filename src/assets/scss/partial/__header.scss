@@ -1,0 +1,96 @@
+.header-menu {
+  padding: 20px 0;
+  &__logo {
+    display: block;
+    width: 152px;
+    height: 48px;
+    img {
+      @include objectImage($type: contain);
+    }
+  }
+  &__nav {
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 42px;
+      }
+      a {
+        color: $darkBlue800;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__list {
+    li {
+      display: inline-block;
+    }
+    .slash{
+        margin: 0 5px;
+    }
+    &--menu {
+      position: relative;
+      user-select: none;
+      .dropDown {
+        display: none;
+        & li {
+          font-size: 14px;
+          color: $darkBlue800;
+          padding: 4px 8px;
+          &:hover{
+              background-color: $darkBlue400;
+          }
+        }
+      }
+      .dropDown.active{
+        display: block;
+        position: absolute;
+        @include flex-jc($type: center);
+        cursor: pointer;
+        margin-top: 8px;
+        border: 1px solid $blueLight;
+      }
+      &::after {
+        content: "\f107";
+        font-family: "FontAwesome";
+        color: $darkBlue600;
+        margin-left: 3px;
+        cursor: pointer;
+      }
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        color: $darkBlue800;
+        img {
+          @include square(20px);
+          vertical-align: middle;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+  &__sign {
+    li {
+      display: inline-block;
+      &:first-child {
+        margin-right: 11px;
+      }
+      a {
+        padding: 10px 25px;
+        border: 1px solid $blueLight;
+        border-radius: 8px;
+        @extend %transition;
+        &:hover {
+          background-color: $yellow500;
+        }
+      }
+    }
+  }
+  .drop-ml{
+      margin-left: 25px;
+  }
+  .flex {
+    @include  flex-center($type:space-between);
+  }
+}

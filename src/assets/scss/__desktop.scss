@@ -2,3 +2,45 @@ body {
   font-family: "Euclid";
   font-weight: 400;
 }
+.connect-item {
+  padding: 40px 0;
+  text-align: center;
+  &__title {
+    @include fontSize(60px, 72px);
+    color: $darkBlue800;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+  &__text {
+    color: $darkBlue600;
+    @include fontSize(16px, 24px);
+  }
+  &__list {
+    margin-top: 56px;
+    li {
+      display: inline-block;
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+      a {
+        background-color: $darkBlue400;
+        color: $darkBlue800;
+        display: block;
+        @include square2(262px, 48px, 48px);
+        border-radius: 8px;
+        @extend %transition;
+        &:hover {
+          background-color: $yellow500;
+        }
+      }
+    }
+  }
+  &__img {
+    @include square(102px);
+    margin-top: 48px;
+    float: right;
+    img {
+      @include objectImage($type: contain);
+    }
+  }
+}
