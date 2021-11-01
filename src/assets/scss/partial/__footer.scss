@@ -2,26 +2,23 @@
   padding: 57px 0 24px 0;
   background-color: $darkBlue200;
   &__logo {
-    width: 127px;
-    height: 40px;
     display: block;
+    @include square2(127px, 40px);
     img {
       @include objectImage($type: contain);
     }
   }
   &__title {
-    font-size: 20px;
+    @include fontSize(20px, 28px);
     color: $darkBlue700;
     margin-bottom: 24px;
-    line-height: 28px;
   }
   &__list {
     li {
       margin-bottom: 16px;
       a {
         color: $darkBlue600;
-        font-size: 16px;
-        line-height: 24px;
+        @include fontSize(16px, 24px);
         @extend %transition;
         &:hover {
           color: $darkBlue700;
