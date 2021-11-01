@@ -2,8 +2,7 @@
   padding: 20px 0;
   &__logo {
     display: block;
-    width: 152px;
-    height: 48px;
+    @include square2(152px, 48px, 0px);
     img {
       @include objectImage($type: contain);
     }
@@ -16,8 +15,7 @@
       }
       a {
         color: $darkBlue800;
-        font-size: 16px;
-        line-height: 24px;
+        @include fontSize(16px, 24px);
       }
     }
   }
@@ -25,8 +23,8 @@
     li {
       display: inline-block;
     }
-    .slash{
-        margin: 0 5px;
+    .slash {
+      margin: 0 5px;
     }
     &--menu {
       position: relative;
@@ -37,12 +35,12 @@
           font-size: 14px;
           color: $darkBlue800;
           padding: 4px 8px;
-          &:hover{
-              background-color: $darkBlue400;
+          &:hover {
+            background-color: $darkBlue400;
           }
         }
       }
-      .dropDown.active{
+      .dropDown.active {
         display: block;
         position: absolute;
         @include flex-jc($type: center);
@@ -58,8 +56,7 @@
         cursor: pointer;
       }
       a {
-        font-size: 14px;
-        line-height: 20px;
+        @include fontSize(14px, 20px);
         color: $darkBlue800;
         img {
           @include square(20px);
@@ -87,10 +84,10 @@
       }
     }
   }
-  .drop-ml{
-      margin-left: 25px;
+  .drop-ml {
+    margin-left: 25px;
   }
   .flex {
-    @include  flex-center($type:space-between);
+    @include flex-center($type: space-between);
   }
 }
